@@ -1,0 +1,21 @@
+.HamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  a {
+    text-decoration: none;
+  }
+  h3 {
+    margin: 0;
+    cursor: pointer;
+    color: $text-color;
+  }
+  .img {
+    height: 43%;
+    width: 52%;
+  }
+}

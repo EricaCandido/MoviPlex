@@ -1,0 +1,68 @@
+.LoginPage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: $secondary-color;
+  min-height: 350px;
+  
+  color: $text-color;
+  gap: 20px;
+  width: 100%;
+  .forms {
+    width: 80%;
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 20%;
+      padding: 50px;
+      border-radius: $border;
+      background-color: rgba(40, 40, 40, 0.89);
+    }
+    .loginForm {
+      width: 100%;
+      h3{
+        color: $primary-color;
+      }
+      h4,
+      p {
+        margin: 0 0 10px;
+        font-size: 0.8rem;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .textInput {
+        margin-bottom: 10px;
+        @include def-input(70%);
+      }
+    }
+
+    .registerSection {
+      width: 100%;
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .Button {
+      @include def-button;
+      color: inherit;
+    }
+  }
+  
+  .backgroundImage {
+    display: none;
+    width: 50%;
+  }
+
+  @include desktop {
+  .LoginPage{
+  min-height: 600px;
+  }
+    .backgroundImage {
+      display: block;
+    }
+  }
+}

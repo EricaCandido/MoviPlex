@@ -1,0 +1,43 @@
+.modalWrap {
+  position: fixed;
+  right: 0;
+  top: 64px;
+  transform: translateX(100%);
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: #3a3a3a;
+  transition: transform 0.7s ease;
+  z-index: 2;
+
+  .backArrow {
+    color: $primary-color;
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .logo {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    width: 120px;
+    z-index: -1;
+  }
+
+  @include tablet {
+    width: 50%;
+  }
+
+  @include desktop {
+    width: 30%;
+  }
+}
+
+.show {
+  transform: translateX(0px);
+}

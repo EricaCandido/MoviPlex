@@ -1,0 +1,96 @@
+.Navbar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: $text-color;
+  background: $background;
+  z-index: 2;
+  position: fixed;
+  height: 64px;
+  .Link:hover{
+    color: $primary-color;
+  }
+  @include tablet {
+    padding: 35px 10px;
+  }
+  .logo {
+    cursor: pointer;
+    img {
+      width: 152px;
+      height: 40px;
+    }
+  }
+
+  .deskLeftNav{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .icons_mobile {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    width: 40%;
+    color: $text-color;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    cursor: pointer;
+    .userIcon {
+      margin-left: -10px;
+    }
+  }
+  .links_desktop {
+    display: none;
+  }
+  .login_desktop {
+    display: none;
+  }
+  .icons_desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .icons_mobile {
+    display: none;
+  }
+  .links_desktop {
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    .Link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .login_desktop {
+    .Link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .icons_desktop {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    svg {
+      height: 30px;
+      width: 30px;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  .deskLeftNav {
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+  }
+}

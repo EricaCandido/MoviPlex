@@ -1,0 +1,117 @@
+.payment__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $roboto;
+  color: $text-color;
+
+  .searchBtn {
+    @include def-button;
+    width: 100%;
+  }
+
+  .payment__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include desktop {
+      background-color: rgba(40, 40, 40, 0.89);
+      width: 25%;
+      padding: 30px;
+      border-radius: $border;
+    }
+    p {
+      text-align: center;
+      font-family: $roboto;
+    }
+  }
+
+  .Ap,
+  .Gp,
+  .Pp,
+  .Cc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .Ap,
+  .Gp,
+  .Pp,
+  .Cc input[type="radio"] {
+    display: none;
+  }
+
+  .payment__typo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  form {
+    gap: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    @include mobile {
+      width: 100%;
+    }
+
+    .total_btn_wrapper {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .payment__typo label {
+    display: block;
+    border: 2px solid black;
+    background-color: $primary-color;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 22px;
+  }
+
+  .payment__typo input[type="radio"] {
+    display: none;
+  }
+
+  .payment__typo label img {
+    object-fit: contain;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .payment__typo input[type="radio"]:checked + img {
+    opacity: 1;
+  }
+
+  .total_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .backgroundImage {
+    display: none;
+    width: 50%;
+  }
+  @include desktop {
+    .backgroundImage {
+      display: block;
+    }
+  }
+}
