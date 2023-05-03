@@ -4,7 +4,7 @@ import Cc from "../assets/cc.png";
 import Gp from "../assets/g_pay.png";
 import Pp from "../assets/pp.png";
 import PaymentModal from "../components/paymentModal";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Context } from "../store/state";
 import image from "../assets/image.png";
 

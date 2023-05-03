@@ -74,7 +74,7 @@ const MovieBooking = () => {
       );
       return state.ticketData.seat.splice(index, 1);
     }
-    console.log(state.ticketData.seat);
+    console.log(state.ticketData);
   };
   const onHandlePayment = () => {
     const dataCheck = selectedDateRef.current.filter((li) => li.className);
@@ -105,7 +105,6 @@ const MovieBooking = () => {
 
   return (
     <div className={styles.MovieBooking}>
-      {/* {console.log(createSelectionDates(startingobject))} */}
       <div className={styles.date_time_wrapper}>
         <h3>Acquista il tuo biglietto per:</h3>
         <h2>{selectedMovie(id)[0]?.title}</h2>

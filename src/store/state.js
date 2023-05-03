@@ -19,6 +19,7 @@ export const initialState = {
     seat: [],
   },
   paymentModalVisible: false,
+  myTicketsModalVisible: false,
 };
 
 export const initRegisteredUsers = {

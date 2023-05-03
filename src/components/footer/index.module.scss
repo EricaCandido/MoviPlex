@@ -7,7 +7,7 @@
   background-color: $footer-color;
   position: absolute;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
 
   .logo {
@@ -24,7 +24,8 @@
     align-self: flex-start;
     flex-wrap: wrap;
     padding-bottom: 15px;
-    p,a {
+    p,
+    a {
       padding-top: 8px;
       cursor: pointer;
       text-decoration: none;
@@ -45,5 +46,4 @@
       color: $background;
     }
   }
-
 }

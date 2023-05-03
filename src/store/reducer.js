@@ -6,7 +6,7 @@ export const mainReducer = (state, action) => {
         movieListData: action.payload,
       };
     case "SET_GENRE_LIST":
-      localStorage.setItem("genreList", JSON.stringify(action.payload))
+      localStorage.setItem("genreList", JSON.stringify(action.payload));
       return {
         ...state,
         genreList: action.payload,
@@ -55,21 +55,25 @@ export const mainReducer = (state, action) => {
         trListData: action.payload,
       };
     case "SET_TICKET_MOVIE_TITLE":
+      localStorage.setItem("movieTitle", JSON.stringify(action.payload));
       return {
         ...state,
         ticketData: { ...state.ticketData, title: action.payload },
       };
     case "SET_TICKET_DATE":
+      localStorage.setItem("movieDate", JSON.stringify(action.payload));
       return {
         ...state,
         ticketData: { ...state.ticketData, date: action.payload },
       };
     case "SET_TICKET_HOUR":
+      localStorage.setItem("movieHour", JSON.stringify(action.payload));
       return {
         ...state,
         ticketData: { ...state.ticketData, hour: action.payload },
       };
     case "SET_TICKET_SEAT":
+      localStorage.setItem("movieSeats", JSON.stringify(action.payload));
       return {
         ...state,
         ticketData: {
@@ -86,6 +90,12 @@ export const mainReducer = (state, action) => {
       return {
         ...state,
         paymentModalVisible: false,
+      };
+
+    case "SET_MY_TICKET_MODAL_VISIBILITY":
+      return {
+        ...state,
+        myTicketsModalVisible: !state.myTicketsModalVisible,
       };
   }
 };

@@ -1,0 +1,67 @@
+.overlay {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background-color: #3a3a3adb;
+  transition: transform 0.7s ease;
+}
+
+.MyTickets {
+  position: fixed;
+  top: calc(50% - 25vh);
+
+  left: 2%;
+  width: 80%;
+
+  background-color: $background;
+  padding: 20px;
+  border-radius: $border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  .close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $secondary-color;
+    }
+  }
+  li {
+    list-style-type: none;
+    border-radius: $border;
+    padding: 10px;
+    background-color: $text-color;
+    color: $background;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .title {
+        font-weight: bold;
+      }
+      p {
+        margin: 0;
+      }
+      .times {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    .qrCode {
+      width: 30%;
+    }
+  }
+}

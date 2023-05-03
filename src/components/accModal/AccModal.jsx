@@ -1,11 +1,13 @@
 import styles from "./index.module.scss";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { Context } from "../../store/state";
+import MyTickets from "../myTickets/MyTickets";
 
 const AccModal = () => {
   const navigate = useNavigate();
   const { state, dispatch } = useContext(Context);
+  const [myTicketModal, setMyTicketModal] = useState(false);
 
   const onHandleLoginRed = () => {
     navigate(`/login`);
@@ -15,10 +17,20 @@ const AccModal = () => {
     localStorage.removeItem("auth");
     navigate("/");
   };
-  console.log(localStorage.getItem("auth"));
+
+  const onHandleMyTicketClick = () => {
+    dispatch({ type: "SET_MY_TICKET_MODAL_VISIBILITY" });
+    console.log(state.myTicketsModalVisible);
+  };
 
   return (
     <div className={styles.AccModal}>
+      {state.myTicketsModalVisible && (
+        <MyTickets
+          myTicketModal={myTicketModal}
+          setMyTicketModal={setMyTicketModal}
+        />
+      )}
       {localStorage.getItem("auth") ? (
         <div className={styles.yes_auth}>
           <div className={styles.accInfo}>
@@ -32,7 +44,7 @@ const AccModal = () => {
           </div>
           <ul className={styles.accOpts}>
             <li>Dettagli profilo</li>
-            <li>I tuoi biglietti</li>
+            <li onClick={onHandleMyTicketClick}>I tuoi biglietti</li>
             <li>Le tue Card e promo</li>
             <li>Modifica la password</li>
             <p onClick={onHandleLogout}>Esci</p>
