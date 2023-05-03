@@ -26,7 +26,8 @@ const PaymentModal = () => {
         <div className={styles.seats}>
           {state.ticketData.seat.filter(Boolean).map((seat, i) => (
             <strong>
-              {i === 0 ? "" : <>&nbsp;- </>}{seat}
+              {i === 0 ? "" : <>&nbsp;- </>}
+              {seat}
             </strong>
           ))}
         </div>

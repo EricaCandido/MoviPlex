@@ -59,6 +59,10 @@
         display: flex;
         gap: 20px;
       }
+      .seats {
+        border: 2px solid $background;
+        padding-left: 3px;
+      }
     }
     .qrCode {
       width: 30%;

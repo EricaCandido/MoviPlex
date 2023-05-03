@@ -81,6 +81,7 @@ export const mainReducer = (state, action) => {
           seat: [action.payload, ...state.ticketData.seat],
         },
       };
+
     case "SET_PAYMENT_MODAL_OPEN":
       return {
         ...state,

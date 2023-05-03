@@ -26,13 +26,14 @@ const MyTickets = () => {
             <div className={styles.times}>
               <p>{state.ticketData.date}</p> <p>{state.ticketData.hour}</p>
             </div>
-            <p>
-              {state.ticketData.seat.filter(Boolean).map((seat, i) => (
+            <p className={styles.seats}>
+              {/* {state.ticketData.seat.filter(Boolean).map((seat, i) => (
                 <strong>
                   {i === 0 ? "" : <>&nbsp;- </>}
-                  {seat}
+                  {seat} aa
                 </strong>
-              ))}
+              ))} */}
+              {localStorage.getItem("movieSeats").slice(1, -1)}
             </p>
           </div>
           <img className={styles.qrCode} src={qrCode} alt="logo" />
